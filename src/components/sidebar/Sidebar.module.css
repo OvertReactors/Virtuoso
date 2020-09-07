@@ -1,3 +1,8 @@
+.main {
+  grid-area: main;
+  background-color: #f2f4f8;
+}
+
 .sidebar {
   grid-area: sidebar;
   background-color: #e5defc;
@@ -65,8 +70,8 @@
 .presenter {
   grid-area: presenter;
   position: absolute;
-  width: 90%;
   height: 60%;
+  width: 100%;
   top: 33%;
 }
 
@@ -76,7 +81,6 @@
   height: 60%;
   width: 100%;
   top: 33%;
-  overflow: hidden;
 }
 
 .skill {
@@ -86,4 +90,10 @@
   top: 33%;
   overflow: hidden;
   width: 100%;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f2f4f8;
+  padding: 2px;
 }
