@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Logo from "../components/logo/Logo.jsx";
+import Logo from "../components/logo/logo.jsx";
 
 test("renders learn react link", () => {
   const { getByText } = render(<Logo />);
