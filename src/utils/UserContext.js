@@ -15,24 +15,27 @@ export const UserProvider = ({ children }) => {
       registered: [],
       completedVideo: [],
       passedQuiz: [],
-      _id: "5f5eab5db441a11880065897",
+      _id: "5f5eab5cb441a11880065891",
       firstname: "",
       lastname: "",
-      email: "sasha@testmail.com",
-      password: "testingupdate",
+      email: "theo-was-here@testmail.com",
+      password: "password",
       role: "",
-      userCreated: ""
-    }
+      userCreated: "",
+    },
   });
 
   console.log(`Current value of User State: ${JSON.stringify(user)}`);
 
-  useEffect(()=> {
-    axios.get(`https://salty-fortress-9010-virt-b.herokuapp.com/user/get/verify/${user.userdata.email}/${user.userdata.password}`)
+  useEffect(() => {
+    axios
+      .get(
+        `https://salty-fortress-9010-virt-b.herokuapp.com/user/get/verify/${user.userdata.email}/${user.userdata.password}`
+      )
       .then((res) => {
         const results = res.data.data;
         console.log(`Results of Axios Call: ${JSON.stringify(results)}`);
-        setUser({logged : true, userdata: results});
+        setUser({ logged: true, userdata: results });
       })
       .catch((err) => {
         console.log(err);
